@@ -1,22 +1,23 @@
-import React from "react";
+import React from 'react';
 
-export class Header extends React.Component {
+// eslint-disable-next-line import/prefer-default-export
+export class Header extends React.PureComponent {
   render() {
     const { children } = this.props;
     const styles = {
       header: {
         height: 54,
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
         padding: 8,
-        backgroundColor: "#2196f3",
-        color: "#ffffff"
+        backgroundColor: '#2196f3',
+        color: '#ffffff',
       },
       heading: {
         fontSize: 20,
-        fontWeight: "normal"
-      }
+        fontWeight: 'normal',
+      },
     };
 
     return (

@@ -1,8 +1,8 @@
 {
-  "name": "shared",
-  "description": "Shared components",
+  "name": "elements",
+  "description": "Lib UI Elements",
   "version": "1.0.0",
-  "author": "Naresh Bhatia",
+  "author": "Lucas Silva",
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {

@@ -15,8 +15,8 @@
   "scripts": {
     "del-dist": "lerna exec --parallel -- del-cli dist",
     "prebuild": "yarn del-dist",
-    "build": "lerna exec --scope shared -- babel src -d dist --ignore test.js,story.js",
-    "start": "cd packages/myapp && yarn start",
+    "build": "lerna exec --scope elements -- babel src -d dist --ignore test.js,story.js",
+    "start": "cd packages/webapp && yarn start",
     "format": "prettier --print-width 80 --tab-width 2 --single-quote --write 'packages/*/src/**/*.js'",
     "precommit": "lint-staged"
   },

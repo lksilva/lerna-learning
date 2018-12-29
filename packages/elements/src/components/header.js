@@ -12,12 +12,12 @@ export class Header extends React.PureComponent {
         alignItems: 'center',
         padding: 8,
         backgroundColor: '#2196f3',
-        color: '#ffffff',
+        color: '#ffffff'
       },
       heading: {
         fontSize: 20,
-        fontWeight: 'normal',
-      },
+        fontWeight: 'normal'
+      }
     };
 
     return (

@@ -3,7 +3,7 @@ Reusable Component Library
 
 Testing
 -------
-Note that `jest` and `babel-jest` dependency versions should match exactly as those of create-react-app in the `myapp` folder.
+Note that `jest` and `babel-jest` dependency versions should match exactly as those of create-react-app in the `webapp` folder.
 
 ```bash
 $ yarn test

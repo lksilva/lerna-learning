@@ -1,5 +1,5 @@
 import React from 'react';
-import './button.css';
+import '../../styles/css/button.css';
 
 const FlatButton = ({ onClick, children }) => (
   <button className="btn" type="button" onClick={onClick}>

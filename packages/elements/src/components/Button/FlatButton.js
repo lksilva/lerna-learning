@@ -1,10 +1,15 @@
-import React from 'react';
-import '../../styles/css/button.css';
+import React, { PureComponent } from 'react';
+import styles from './FlatButton.module.scss';
 
-const FlatButton = ({ onClick, children }) => (
-  <button className="btn" type="button" onClick={onClick}>
-    <span>{children}</span>
-  </button>
-);
+class FlatButton extends PureComponent {
+  render() {
+    const { onClick, children } = this.props;
+    return (
+      <button className={styles.btn} type="button" onClick={onClick}>
+        <span>{children}</span>
+      </button>
+    );
+  }
+}
 
 export default FlatButton;

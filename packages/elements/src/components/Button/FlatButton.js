@@ -1,13 +1,10 @@
 import React from 'react';
-import { withTheme } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import './button.css';
 
-import theme from '../../theme';
-
-const FlatButton = ({ onClick, name }) => (
-  <Button variant="outlined" color="secondary" onClick={onClick}>
-    {name}
-  </Button>
+const FlatButton = ({ onClick, children }) => (
+  <button className="btn" type="button" onClick={onClick}>
+    <span>{children}</span>
+  </button>
 );
 
-export default withTheme(theme)(FlatButton);
+export default FlatButton;

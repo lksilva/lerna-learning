@@ -6,5 +6,5 @@ import { storiesOf } from '@storybook/react';
 import FlatButton from '../../src/components/Button/FlatButton';
 
 storiesOf('Buttons', module).add('FlatButtom', () => (
-  <FlatButton name="React Button" onClick={action('clicked')} />
+  <FlatButton onClick={action('clicked')}>React Button RX</FlatButton>
 ));

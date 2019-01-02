@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Header } from 'elements';
 export class HomePage extends React.Component {
   render() {
     const styles = {
@@ -8,6 +8,11 @@ export class HomePage extends React.Component {
       }
     };
 
-    return <div style={styles.content}>Home Page</div>;
+    return (
+      <div style={styles.content}>
+        <Header />
+        <h1>Home Page</h1>
+      </div>
+    );
   }
 }

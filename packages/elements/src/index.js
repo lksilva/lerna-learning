@@ -1,4 +1,4 @@
-// import FlatButton from './components/Button/FlatButton';
+import FlatButton from './components/Button/FlatButton';
 
-// export { FlatButton };
+export { FlatButton };
 export { Header } from './components/header';

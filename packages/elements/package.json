@@ -66,6 +66,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^3.7.1",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "styled-components": "^4.1.3"
   }
 }

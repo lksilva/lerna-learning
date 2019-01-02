@@ -1,6 +1,10 @@
 import React from 'react';
-import { Header } from 'elements';
+import { Header, FlatButton } from 'elements';
 export class HomePage extends React.Component {
+  handleButton = () => {
+    console.log('Já deu certo pivete doido');
+  };
+
   render() {
     const styles = {
       content: {
@@ -12,6 +16,7 @@ export class HomePage extends React.Component {
       <div style={styles.content}>
         <Header />
         <h1>Home Page</h1>
+        <FlatButton onClick={this.handleButton}>vdc</FlatButton>
       </div>
     );
   }

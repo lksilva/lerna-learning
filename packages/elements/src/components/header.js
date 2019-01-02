@@ -1,29 +1,29 @@
 import React from 'react';
+import styled from 'styled-components';
 
-// eslint-disable-next-line import/prefer-default-export
-export class Header extends React.PureComponent {
+const Container = styled.div`
+  height: 54px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  background-color: #2196f3;
+  color: #ffffff;
+`;
+
+const Title = styled.h1`
+  font-size: 20px;
+  font-weight: normal;
+`;
+
+export default class Header extends React.PureComponent {
   render() {
     const { children } = this.props;
-    const styles = {
-      header: {
-        height: 54,
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        padding: 8,
-        backgroundColor: '#2196f3',
-        color: '#ffffff'
-      },
-      heading: {
-        fontSize: 20,
-        fontWeight: 'normal'
-      }
-    };
 
     return (
-      <div style={styles.header}>
-        <h1 style={styles.heading}>{children}</h1>
-      </div>
+      <Container>
+        <Title>{children}</Title>
+      </Container>
     );
   }
 }

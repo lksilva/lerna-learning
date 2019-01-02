@@ -14,8 +14,7 @@ export class HomePage extends React.Component {
 
     return (
       <div style={styles.content}>
-        <Header />
-        <h1>Home Page</h1>
+        <Header>Header da parada</Header>
         <FlatButton onClick={this.handleButton}>vdc</FlatButton>
       </div>
     );

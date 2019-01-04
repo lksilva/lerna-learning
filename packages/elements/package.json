@@ -44,6 +44,7 @@
     "react-dom": "^16.7.0",
     "react-scripts": "^2.1.2",
     "sass-loader": "^7.1.0",
+    "storybook-readme": "^4.0.2",
     "style-loader": "^0.21.0"
   },
   "jest": {

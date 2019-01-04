@@ -3,13 +3,22 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { withDocs } from 'storybook-readme';
 import { storiesOf } from '@storybook/react';
+import { withKnobs, boolean, text } from '@storybook/addon-knobs';
+import { withNotes } from '@storybook/addon-notes';
 
-import ButtomMD from './README.md';
+import ButtonMD from './README.md';
 
 import FlatButton from '../../src/components/Button/FlatButton';
 
 storiesOf('Buttons', module)
-  .addDecorator(withDocs(ButtomMD))
+  .addDecorator(withKnobs)
+  .addDecorator(withDocs(ButtonMD))
+  .addDecorator(withNotes('The best FlatButtom'))
   .add('FlatButton', () => (
-    <FlatButton onClick={action('clicked')}>FlatButtom</FlatButton>
+    <FlatButton
+      onClick={action('clicked')}
+      disabled={boolean('Disabled', false)}
+    >
+      {text('Label', 'FlatButtom')}
+    </FlatButton>
   ));

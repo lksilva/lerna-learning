@@ -28,14 +28,9 @@
     "lint-staged": "^7.0.2",
     "prettier": "^1.11.1"
   },
-  "husky": {
-     "hooks": {  
-       "pre-commit": "lint-staged"
-     }
-   },
   "lint-staged": {
     "packages/**/*.js": [
-      "eslint",
+      "eslint .",
       "git add"
     ]
   }

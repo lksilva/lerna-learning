@@ -14,24 +14,23 @@
   ],
   "scripts": {
     "del-dist": "lerna exec --parallel -- del-cli dist",
+    "lint": "eslint 'packages/**/src/**/*.js'",
     "prebuild": "yarn del-dist",
     "build": "lerna exec --scope elements -- babel src -d dist --ignore test.js,story.js",
     "start": "cd packages/webapp && yarn start",
-    "precommit": "lint-staged",
     "format": "prettier --print-width 80 --tab-width 2 --single-quote --write 'packages/*/src/**/*.js'",
-    "rebuilt": "rm -rf yarn.lock node_modules && cd packages && cd desktop && rm -rf node_modules yarn.lock && cd .. && cd elements && rm -rf node_modules && cd .. && cd webapp && rm -rf node_modules && cd .. && cd .. && yarn"
+    "clean": "rm -rf yarn.lock node_modules && cd packages && cd desktop && rm -rf node_modules yarn.lock && cd .. && cd elements && rm -rf node_modules && cd .. && cd webapp && rm -rf node_modules"
   },
   "devDependencies": {
     "del-cli": "^1.1.0",
-    "husky": "^0.14.3",
+    "husky": "^1.3.1",
     "lerna": "^2.9.0",
     "lint-staged": "^7.0.2",
     "prettier": "^1.11.1"
   },
-  "lint-staged": {
-    "packages/**/*.js": [
-      "eslint",
-      "git add"
-    ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
   }
 }

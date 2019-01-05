@@ -23,8 +23,7 @@ const Button = styled.button`
   align-items: center;
   user-select: none;
   text-decoration: none;
-  background-color: ${props =>
-    props.disabled ? 'rgba(0, 0, 0, 0.12)' : 'transparent'};
+  background-color: ${props => (props.disabled ? 'rgba(0, 0, 0, 0.12)' : 'transparent')};
   vertical-align: middle;
   justify-content: center;
   pointer-events: ${props => (props.disabled ? 'none' : 'default')}

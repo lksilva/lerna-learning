@@ -30,7 +30,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier --print-width 80 --tab-width 2 --single-quote --write",
+      "eslint 'src/**/*.js'",
       "git add"
     ]
   }

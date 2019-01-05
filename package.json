@@ -14,7 +14,8 @@
   ],
   "scripts": {
     "del-dist": "lerna exec --parallel -- del-cli dist",
-    "lint": "eslint 'packages/**/src/**/*.js'",
+    "__COMENT": "TODO: Regra de lint aplicada apenas aos elements",
+    "lint": "eslint 'packages/elements/src/**/*.js'",
     "prebuild": "yarn del-dist",
     "build": "lerna exec --scope elements -- babel src -d dist --ignore test.js,story.js",
     "start": "cd packages/webapp && yarn start",

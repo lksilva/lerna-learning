@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { Header } from 'elements';
 import { HomePage } from './features/home/home-page';
 
-export class App extends React.Component {
+export default class App extends PureComponent {
   render() {
     return (
       <div>

@@ -18,7 +18,6 @@
     "build": "lerna exec --scope elements -- babel src -d dist --ignore test.js,story.js",
     "start": "cd packages/webapp && yarn start",
     "format": "prettier --print-width 80 --tab-width 2 --single-quote --write 'packages/*/src/**/*.js'",
-    "precommit": "lint-staged",
     "rebuilt": "rm -rf yarn.lock node_modules && cd packages && cd desktop && rm -rf node_modules yarn.lock && cd .. && cd elements && rm -rf node_modules && cd .. && cd webapp && rm -rf node_modules && cd .. && cd .. && yarn"
   },
   "devDependencies": {
@@ -28,6 +27,11 @@
     "lint-staged": "^7.0.2",
     "prettier": "^1.11.1"
   },
+  "husky": {
+     "hooks": {  
+       "pre-commit": "lint-staged"
+     }
+   },
   "lint-staged": {
     "*.js": [
       "eslint 'src/**/*.js'",

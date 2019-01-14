@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, FlatButton } from 'elements';
 export class HomePage extends React.Component {
   handleButton = () => {
-    console.log('Já deu certo pivete doido');
+    console.log('Logar usuário');
   };
 
   render() {
@@ -14,8 +14,8 @@ export class HomePage extends React.Component {
 
     return (
       <div style={styles.content}>
-        <Header>Header da parada</Header>
-        <FlatButton onClick={this.handleButton}>vdc</FlatButton>
+        <Header>Header Compartilhados</Header>
+        <FlatButton onClick={this.handleButton}>Login</FlatButton>
       </div>
     );
   }

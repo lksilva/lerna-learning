@@ -12,11 +12,13 @@ import { FlatButton } from 'elements';
 
 * `onClick` - click callback
 * `label` - button text
+* `disabled` - boolean properties
 
 | propName | propType | defaultValue | isRequired |
 | -------- | -------- | ------------ | ---------- |
 | onClick  | func     | -            |            |
 | label    | string   | -            | true       |
+| disabled | boolean  | false        | false      | 
 
 ### Roadmap
 
@@ -25,7 +27,7 @@ import { FlatButton } from 'elements';
 
 render() {
   return (
-    <FlatButton onClick={this.handleClick}>FlatButton</FlatButton>
+    <FlatButton disabled={false} onClick={this.handleClick}>FlatButton</FlatButton>
   );
 }
 ```
